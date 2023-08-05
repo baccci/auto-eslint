@@ -1,0 +1,17 @@
+{
+  "linterDependencies": [
+    "eslint-config-standard",
+    "eslint-plugin-import",
+    "eslint-plugin-node",
+    "eslint-plugin-promise",
+    "ts-standard"
+  ],
+  "linterConfigurationFile": ".eslintrc.json",
+  "linterConfig": {
+    "extends": "standard",
+    "rules": {
+      "no-console": "warn"
+    },
+    "plugins": []
+  }
+}

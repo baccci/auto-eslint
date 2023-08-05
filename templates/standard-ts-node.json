@@ -1,0 +1,30 @@
+{
+  "linterDependencies": [
+    "eslint",
+    "ts-standard",
+    "typescript"
+  ],
+  "linterConfigurationFile": ".eslintrc.json",
+  "necesaryFiles": ["tsconfig.json"],
+  "linterConfig": {
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "extends": "./node_modules/ts-standard/eslintrc.json",
+    "rules": {
+      "no-console": "warn"
+    },
+    "plugins": []
+  },
+  "defaultFiles": {
+    "tsconfig.json": {
+      "compilerOptions": {
+        "target": "es2017",
+        "module": "Node16",
+        "moduleDetection": "force",
+        "esModuleInterop": true,
+        "strict": true
+      }
+    }
+  }
+}

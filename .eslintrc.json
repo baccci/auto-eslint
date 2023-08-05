@@ -1,0 +1,30 @@
+{
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "./node_modules/ts-standard/eslintrc.json"
+  ],
+  "rules": {
+    "space-before-function-paren": "off",
+    "@typescript-eslint/space-before-function-paren": "off",
+    "no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-console": "off",
+    "padded-blocks": "off",
+    "eol-last": "off",
+    "no-multiple-empty-lines": "warn",
+    "no-trailing-spaces": "off",
+    "keyword-spacing": "off",
+    "@typescript-eslint/keyword-spacing": "off",
+    "no-irregular-whitespace": "off",
+    "spaced-comment": "warn",
+    "indent": "warn",
+    "object-curly-spacing": "warn",
+    "no-multi-spaces": "warn",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/return-await": "off",
+    "@typescript-eslint/no-misused-promises": "off"
+  }
+}
