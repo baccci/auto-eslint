@@ -8,7 +8,6 @@ import useExistingTemplate from './useExistingTemplate.js'
 import creatingBasicTemplate from './steps/creatingBasicTemplate.js'
 
 async function main () {
-  console.clear()
 
   const { intro, outro } = p
 
