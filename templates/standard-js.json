@@ -1,0 +1,14 @@
+{
+  "linterDependencies": [
+    "eslint",
+    "standard",
+    "eslint-config-standard"
+  ],
+  "linterConfigurationFile": ".eslintrc.json",
+  "linterConfig": {
+    "extends": "standard",
+    "rules": {
+      "no-console": "warn"
+    }
+  }
+}
