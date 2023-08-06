@@ -1,5 +1,5 @@
 {
-  "name": "auto-eslint-cli",
+  "name": "auto-eslint",
   "version": "1.0.0",
   "description": "Autoinstall eslint with your own rules and configuration",
   "main": "index.ts",
