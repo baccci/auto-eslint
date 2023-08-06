@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "lint": "ts-standard",
-    "start": "ts-node --esm index.ts"
+    "start": "ts-node --esm src/index.ts"
   },
   "keywords": [
     "linter"
