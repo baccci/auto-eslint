@@ -3,7 +3,6 @@ import color from 'picocolors'
 import onCancel from '../lib/onCancel.js'
 import { validateExtends, validateFileName } from '../lib/validations.js'
 import fs from 'node:fs/promises'
-import { __dirname } from '../constants/global.js'
 
 export default async function creatingBasicTemplate() {
   const wizardGroup = await p.group(
@@ -40,7 +39,7 @@ export default async function creatingBasicTemplate() {
 
   const { templateName, dependencies, extends: ext, linterConfigFile } = wizardGroup
 
-  const cwd = __dirname
+  const cwd = process.cwd()
   const filePath = `${cwd}/templates/${templateName}.json`
   const fileContent = {
     linterDependencies: dependencies.split(' '),
