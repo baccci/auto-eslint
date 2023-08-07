@@ -1,28 +1,33 @@
 {
   "name": "auto-eslint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Autoinstall eslint with your own rules and configuration",
-  "main": "index.ts",
+  "main": "./dist/index.js",
   "type": "module",
+  "bin": "./dist/index.js",
   "scripts": {
     "lint": "ts-standard",
-    "start": "ts-node --esm src/index.ts"
+    "start": "node --experimental-specifier-resolution=node --loader ts-node/esm src/index.ts",
+    "prepare": "npm run build",
+    "build": "tsc"
   },
   "keywords": [
-    "linter"
+    "linter",
+    "eslint"
   ],
-  "author": "Salvador Bacci",
-  "license": "ISC",
+  "author": "Salvador Bacci <salvador_bacci@hotmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/baccci/auto-eslint",
   "devDependencies": {
     "@types/node": "^20.4.5",
-    "ts-node": "^10.9.1",
     "eslint": "^8.46.0",
+    "ts-node": "^10.9.1",
     "ts-standard": "^12.0.2",
     "typescript": "^5.1.6"
   },
   "dependencies": {
     "@clack/prompts": "^0.6.3",
-    "picocolors": "^1.0.0",
-    "@types/semver": "^7.5.0"
+    "@types/semver": "^7.5.0",
+    "picocolors": "^1.0.0"
   }
 }
