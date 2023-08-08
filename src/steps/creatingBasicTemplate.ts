@@ -44,7 +44,7 @@ export default async function creatingBasicTemplate() {
 
   const cwd = getAppPath()
 
-  const filePath = `${cwd}/templates/${templateName}.json`
+  const filePath = path.join(cwd, 'templates', `${templateName}.json`)
   const fileContent = {
     linterDependencies: dependencies.split(' '),
     linterConfigurationFile: linterConfigFile,
