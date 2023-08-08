@@ -4,6 +4,8 @@ import onCancel from '../lib/onCancel.js'
 import { validateExtends, validateFileName } from '../lib/validations.js'
 import fs from 'node:fs/promises'
 import appRoot from 'app-root-path'
+import { fileURLToPath } from 'url'
+import path from 'node:path'
 
 export default async function creatingBasicTemplate() {
   const wizardGroup = await p.group(
@@ -40,7 +42,9 @@ export default async function creatingBasicTemplate() {
 
   const { templateName, dependencies, extends: ext, linterConfigFile } = wizardGroup
 
-  const cwd = require.main?.filename?.replace('/steps', '') ? appRoot.resolve(require.main.filename) : process.cwd()
+  const filename = fileURLToPath(import.meta.url)
+  const dirname = path.dirname(filename)
+  const cwd = dirname.replace('/steps', '')
   const filePath = `${cwd}/templates/${templateName}.json`
   const fileContent = {
     linterDependencies: dependencies.split(' '),
