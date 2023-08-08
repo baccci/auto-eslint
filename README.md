@@ -15,7 +15,7 @@ ESLint configuration files, among others.
 ## How to use
 
 ### Install
-I recommend you install it as a global dependency, so you can use it anywhere. It's up to you.
+I recommend you to install it as a global dependency, so you can use it anywhere. It's up to you.
 
 **npm**
 
@@ -53,7 +53,7 @@ the program will modify it according to the template. In case you don't have the
 
 In some cases, you may need another extra file, like a `tsconfig.json` file. In those cases the CLI will create it for you.
 
-Once you have all the files you need, the script will install all the dependencies, letting you to decided what package manager to use.
+Once you have all the files you need, the script will install all the dependencies, letting you to decide what package manager to use.
 
 When the installing process ends, the linter should be working as expected. 
 
@@ -61,7 +61,7 @@ _(Sometimes you may need to restart your code editor in order to work)_
 
 ### Creating a new template
 
-If you chose to create a new template, you can use the wizard to create a basic one or instead create one manually by yourself.
+If you choose to create a new template, you can use the wizard to create a basic one or instead create one manually by yourself.
 
 The templates you can create with the wizard are very limited. You can only specify the dependencies you need and what should the ESLint extends.
 
@@ -87,7 +87,7 @@ For example: ["eslint", "ts-standard", "typescript"]
 
 In case you already have a configuration file, It won't delete the existing configuration.
 
-`necesaryFiles`: An array of the files you must have for the linter to work. By default, empty.
+`necessaryFiles`: An array of the files you must have for the linter to work. By default, empty.
 
 `defaultFiles`: A list of files you may need. In case you have a file in the list of **necesaryFiles**, the program will look for it in the root. If it doesn't exist, it will write it with the
 information in this list. The name of the 'necessary file' must match exactly the name of this list.
