@@ -4,9 +4,10 @@ import * as p from '@clack/prompts'
 import color from 'picocolors'
 import { intro_message } from './constants/messages.js'
 import getTemplateNames from './lib/getTemplatesNames.js'
-import { SELECT_STRINGS, __dirname } from './constants/global.js'
+import { SELECT_STRINGS } from './constants/global.js'
 import useExistingTemplate from './useExistingTemplate.js'
 import creatingBasicTemplate from './steps/creatingBasicTemplate.js'
+import getAppPath from './lib/getAppPath.js'
 
 async function main () {
 
@@ -41,7 +42,7 @@ async function main () {
   })
 
   if(confirmManuallyAdd === SELECT_STRINGS.NO) {
-    const rootPath = __dirname
+    const rootPath = getAppPath()
     console.log(
       `\n You need to create a new file with ${color.magenta('.json')} extension name in the path` +
       ` ${color.magenta(rootPath + '/templates')} \n`

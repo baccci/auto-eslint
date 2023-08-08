@@ -5,6 +5,7 @@ import { validateExtends, validateFileName } from '../lib/validations.js'
 import fs from 'node:fs/promises'
 import { fileURLToPath } from 'url'
 import path from 'node:path'
+import getAppPath from '../lib/getAppPath.js'
 
 export default async function creatingBasicTemplate() {
   const wizardGroup = await p.group(
@@ -41,9 +42,7 @@ export default async function creatingBasicTemplate() {
 
   const { templateName, dependencies, extends: ext, linterConfigFile } = wizardGroup
 
-  const filename = fileURLToPath(import.meta.url)
-  const dirname = path.dirname(filename)
-  const cwd = dirname.replace(/[\\/]steps$/, '')
+  const cwd = getAppPath()
 
   const filePath = `${cwd}/templates/${templateName}.json`
   const fileContent = {
