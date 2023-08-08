@@ -89,7 +89,7 @@ In case you already have a configuration file, It won't delete the existing conf
 
 `necesaryFiles`: An array of the files you must have for the linter to work. By default, empty.
 
-`necesaryFiles`: A list of files you may need. In case you have a file in the list of **necesaryFiles**, the program will look for it in the root. If it doesn't exist, it will write it with the
+`defaultFiles`: A list of files you may need. In case you have a file in the list of **necesaryFiles**, the program will look for it in the root. If it doesn't exist, it will write it with the
 information in this list. The name of the 'necessary file' must match exactly the name of this list.
 
 ---
