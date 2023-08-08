@@ -43,7 +43,7 @@ export default async function creatingBasicTemplate() {
 
   const filename = fileURLToPath(import.meta.url)
   const dirname = path.dirname(filename)
-  const cwd = dirname.replace('/steps', '').replace('\\dist', '')
+  const cwd = dirname.replace(/[\\/]steps$/, '')
 
   const filePath = `${cwd}/templates/${templateName}.json`
   const fileContent = {
