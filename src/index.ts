@@ -2,7 +2,7 @@
 
 import * as p from '@clack/prompts'
 import color from 'picocolors'
-import { intro_message } from './constants/messages.js'
+import { introMessage } from './constants/messages.js'
 import getTemplateNames from './lib/getTemplatesNames.js'
 import { SELECT_STRINGS } from './constants/global.js'
 import useExistingTemplate from './useExistingTemplate.js'
@@ -13,7 +13,7 @@ async function main () {
 
   const { intro, outro } = p
 
-  intro(intro_message)
+  intro(introMessage)
   const route = process.argv[2] || '.'
 
   const templateNames = await getTemplateNames()
