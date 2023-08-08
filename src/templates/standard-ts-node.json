@@ -6,7 +6,7 @@
     "typescript"
   ],
   "linterConfigurationFile": ".eslintrc.json",
-  "necesaryFiles": ["tsconfig.json"],
+  "necessaryFiles": ["tsconfig.json"],
   "linterConfig": {
     "parserOptions": {
       "project": "./tsconfig.json"

@@ -3,12 +3,12 @@ import * as p from '@clack/prompts'
 import color from 'picocolors'
 import type { Template } from '../types/templates.js'
 
-export default async function validatingNecesaryFiles(template: Template, path: string) {
+export default async function validatingnecessaryFiles(template: Template, path: string) {
   
-  const { necesaryFiles } = template
-  if(!necesaryFiles) return
+  const { necessaryFiles } = template
+  if(!necessaryFiles) return
 
-  for (const file of necesaryFiles) {
+  for (const file of necessaryFiles) {
     try {
       await checkFileExistence({ path, file, template })
       console.log(`The file ${color.magenta(file)} was created successfully.`)
@@ -32,7 +32,7 @@ const checkFileExistence = async ({ path, file, template }: CheckFileExistenceAr
 
   if(!fileExists) {
     const confirm = await p.confirm({ 
-      message: `\n A ${color.magenta(file)} file is necesary, otherwise the linter may not work properly. Do you want to create it?`
+      message: `\n A ${color.magenta(file)} file is necessary, otherwise the linter may not work properly. Do you want to create it?`
     })
 
     if(!confirm) return true

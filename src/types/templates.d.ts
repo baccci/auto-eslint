@@ -18,7 +18,7 @@ export interface Template {
       [key: string]: any
     }
   }
-  necesaryFiles: string[]
+  necessaryFiles: string[]
   defaultFiles: {
     [key: string]: string
   }
