@@ -43,7 +43,7 @@ export default async function useExistingTemplate(route: string, templateSelecti
 
     p.note(`\n ${color.green('Template installed successfully.')}`)
     
-    outro('All done! \n Somethings may not work properly until you restart your editor. Happy coding!')
+    outro('All done! \n Some things may not work properly until you restart your editor. Happy coding!')
     process.exit(0)
 
   } catch (e) {
