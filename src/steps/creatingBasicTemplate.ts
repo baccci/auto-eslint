@@ -40,7 +40,7 @@ export default async function creatingBasicTemplate() {
 
   const { templateName, dependencies, extends: ext, linterConfigFile } = wizardGroup
 
-  const cwd = appRoot.toString()
+  const cwd = require.main?.filename?.replace('/steps', '') ? appRoot.resolve(require.main.filename) : process.cwd()
   const filePath = `${cwd}/templates/${templateName}.json`
   const fileContent = {
     linterDependencies: dependencies.split(' '),
