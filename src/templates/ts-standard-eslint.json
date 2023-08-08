@@ -1,4 +1,5 @@
-{
+{ 
+  "description": "Standard for React, Next or others projects coded with typescript",
   "linterDependencies": [
     "eslint-config-standard",
     "eslint-plugin-import",

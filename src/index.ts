@@ -24,7 +24,7 @@ async function main () {
         message: 'Would you like to load a template? \n',
         options: [
           { value: 'no', label: "No, I'd like create my own." },
-          ...templateNames.map((name) => ({ value: name, label: name }))
+          ...templateNames.map(({ name, description }) => ({ value: name, label: name, hint: description ?? '' }))
         ]
       })
   })

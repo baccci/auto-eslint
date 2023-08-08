@@ -1,5 +1,6 @@
 
 export interface Template {
+  description: string
   linterDependencies: string[]
   linterConfigurationFile: string
   linterConfig: {

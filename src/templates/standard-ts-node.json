@@ -1,4 +1,5 @@
-{
+{ 
+  "description": "Standard style guide for typescript projects running in NodeJS",
   "linterDependencies": [
     "eslint",
     "ts-standard",
