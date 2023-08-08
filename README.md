@@ -15,7 +15,7 @@ ESLint configuration files, among others.
 ## How to use
 
 ### Install
-I recommend you to install it as a global dependency, so you can use it anywhere. It's up to you.
+I'd recommend you installing it as a global dependency, so you can use it anywhere. It's up to you.
 
 **npm**
 
