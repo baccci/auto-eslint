@@ -3,7 +3,6 @@ import color from 'picocolors'
 import onCancel from '../lib/onCancel.js'
 import { validateExtends, validateFileName } from '../lib/validations.js'
 import fs from 'node:fs/promises'
-import { fileURLToPath } from 'url'
 import path from 'node:path'
 import getAppPath from '../lib/getAppPath.js'
 
@@ -56,7 +55,8 @@ export default async function creatingBasicTemplate() {
   try {
     await fs.writeFile(filePath, JSON.stringify(fileContent, null, 2))
 
-    p.note(`Template file created successfully! \nYou'll find the new template in ${color.magenta(filePath)}`, color.green('All done! 🎉'))
+    p.note('Template file created successfully', color.green('All done! 🎉'))
+    console.log(`\nYou'll find the new template in ${color.magenta(filePath)}`)
 
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : (error as string)
