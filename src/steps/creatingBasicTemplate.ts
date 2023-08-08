@@ -3,7 +3,6 @@ import color from 'picocolors'
 import onCancel from '../lib/onCancel.js'
 import { validateExtends, validateFileName } from '../lib/validations.js'
 import fs from 'node:fs/promises'
-import appRoot from 'app-root-path'
 import { fileURLToPath } from 'url'
 import path from 'node:path'
 
@@ -44,7 +43,8 @@ export default async function creatingBasicTemplate() {
 
   const filename = fileURLToPath(import.meta.url)
   const dirname = path.dirname(filename)
-  const cwd = dirname.replace('/steps', '')
+  const cwd = dirname.replace('/steps', '').replace('\\dist', '')
+
   const filePath = `${cwd}/templates/${templateName}.json`
   const fileContent = {
     linterDependencies: dependencies.split(' '),
