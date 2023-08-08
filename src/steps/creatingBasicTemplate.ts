@@ -40,7 +40,7 @@ export default async function creatingBasicTemplate() {
 
   const { templateName, dependencies, extends: ext, linterConfigFile } = wizardGroup
 
-  const cwd = appRoot.path
+  const cwd = appRoot.toString()
   const filePath = `${cwd}/templates/${templateName}.json`
   const fileContent = {
     linterDependencies: dependencies.split(' '),
